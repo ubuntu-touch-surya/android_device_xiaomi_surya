@@ -121,6 +121,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.device.rc
 
+# Refresh rate
+PRODUCT_PACKAGES += \
+    RefreshRate
+
 # Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common \
