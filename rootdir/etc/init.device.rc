@@ -1,11 +1,11 @@
-on init 
+on init
     chown system system /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_hbm
     chown system system /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_cabc
     chown system system /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_cabc_movie
-    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_cabc_still  
+    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_cabc_still
 
 on property:ro.boot.hwc=*
-    setprop vendor.boot.hwc ${ro.boot.hwc}   
+    setprop vendor.boot.hwc ${ro.boot.hwc}
 
 on property:init.svc.vendor.cnss_diag=running
     stop vendor.cnss_diag

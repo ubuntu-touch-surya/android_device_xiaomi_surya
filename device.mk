@@ -111,7 +111,7 @@ PRODUCT_COPY_FILES += \
 # Overlays - override vendor ones
 PRODUCT_PACKAGES += \
     FrameworksResCommon \
-    FrameworksResTarget 
+    FrameworksResTarget
 
 # Power
 PRODUCT_PACKAGES += \
@@ -119,7 +119,8 @@ PRODUCT_PACKAGES += \
 
 # Product init
 PRODUCT_PACKAGES += \
-    init.device.rc
+    setup_fake_cache.sh \
+    init.recovery.qcom.rc
 
 # Refresh rate
 PRODUCT_PACKAGES += \
@@ -149,8 +150,6 @@ PRODUCT_PACKAGES += \
     libaacwrapper \
     libnl
 
-PRODUCT_BOOT_JARS += \
-    WfdCommon
 
 # Thetering offload
 PRODUCT_PACKAGES += \
