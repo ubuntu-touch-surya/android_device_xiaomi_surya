@@ -119,6 +119,7 @@ PRODUCT_PACKAGES += \
 
 # Product init
 PRODUCT_PACKAGES += \
+    setup_logical.sh \
     setup_fake_cache.sh \
     init.recovery.qcom.rc
 

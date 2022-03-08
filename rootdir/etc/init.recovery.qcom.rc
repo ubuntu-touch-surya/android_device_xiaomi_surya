@@ -6,6 +6,12 @@ on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
 
+service setup_logical /system/bin/setup_logical.sh
+    user root
+    group root
+    seclabel u:r:recovery:s0
+    oneshot
+
 on post-fs-data
     start setup_fake_cache
     wait_for_prop halium.datamount.done 1
