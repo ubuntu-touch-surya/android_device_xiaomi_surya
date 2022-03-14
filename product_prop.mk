@@ -3,14 +3,12 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
-# ADB
-ifeq ($(TARGET_BUILD_VARIANT),eng)
-# /vendor/default.prop is force-setting ro.adb.secure=1
-# Get rid of that by overriding it in /product on eng builds
-PRODUCT_PRODUCT_PROPERTIES += \
+
+# Enable insecure ADB for UBports recovery
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.secure=0 \
-    ro.adb.secure=0
-endif
+    ro.adb.secure=0 \
+    persist.sys.usb.config=adb
 
 # Camera
 PRODUCT_PRODUCT_PROPERTIES += \
